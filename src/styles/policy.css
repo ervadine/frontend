@@ -1,0 +1,120 @@
+/* Terms and Policy Pages */
+.terms-page .term-section,
+.policy-page .policy-section {
+  line-height: 1.6;
+}
+
+.term-bullet,
+.policy-content p.mb-1.ps-3 {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.term-bullet::before,
+.policy-content p.mb-1.ps-3::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.policy-nav .nav-link {
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  color: var(--dark-color);
+}
+
+.policy-nav .nav-link:hover {
+  background-color: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary-color);
+}
+
+.policy-nav .nav-link.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.policy-nav .nav-link i {
+  font-size: 1.1rem;
+}
+
+.policy-content-container .cursor-pointer {
+  cursor: pointer;
+}
+
+.policy-content-container .hover-shadow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.policy-content-container .hover-shadow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.quick-links-section .btn {
+  transition: all 0.3s ease;
+}
+
+.quick-links-section .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Resources Section */
+.resources-section .card {
+  transition: transform 0.3s ease;
+}
+
+.resources-section .card:hover {
+  transform: translateY(-5px);
+}
+
+.resources-section .icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: rgba(var(--primary-rgb), 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .policy-nav {
+    position: static !important;
+  }
+  
+  .policy-nav .card {
+    margin-bottom: 2rem;
+  }
+  
+  .quick-links-section .btn {
+    padding: 1rem 0.5rem;
+  }
+  
+  .quick-links-section .btn span {
+    font-size: 0.9rem;
+  }
+}
+
+/* Print styles for policies */
+@media print {
+  .policy-nav,
+  .quick-links-section,
+  .resources-section,
+  .page-title .breadcrumbs {
+    display: none;
+  }
+  
+  .policy-content-container {
+    margin-top: 0;
+  }
+  
+  .policy-details {
+    box-shadow: none !important;
+    border: 1px solid #dee2e6 !important;
+  }
+}

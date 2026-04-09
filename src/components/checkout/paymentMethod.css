@@ -1,0 +1,247 @@
+/* Payment Cards Grid */
+.payment-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Payment Card */
+.payment-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.payment-card.default {
+  border: 2px solid #28a745;
+}
+
+.payment-card.expired {
+  opacity: 0.7;
+}
+
+/* Card Header */
+.payment-card .card-header {
+  padding: 1rem 1.25rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-type {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.card-type i {
+  font-size: 1.5rem;
+}
+
+.card-badges {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.default-badge {
+  background: #28a745;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.expired-badge {
+  background: #dc3545;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Card Body */
+.payment-card .card-body {
+  padding: 1.25rem;
+}
+
+.card-number-display {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.card-number-display i {
+  font-size: 2rem;
+  color: #6c757d;
+  transform: rotate(90deg);
+}
+
+.card-number {
+  font-size: 1.25rem;
+  font-family: monospace;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.cardholder-info,
+.expiry-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardholder-info .label,
+.expiry-info .label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #6c757d;
+  letter-spacing: 0.5px;
+}
+
+.cardholder-info .value,
+.expiry-info .value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+/* Card Actions */
+.payment-card .card-actions {
+  padding: 1rem 1.25rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-make-default,
+.btn-remove {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-make-default {
+  background: #e9ecef;
+  color: #28a745;
+}
+
+.btn-make-default:hover:not(:disabled) {
+  background: #28a745;
+  color: white;
+}
+
+.btn-remove {
+  background: #e9ecef;
+  color: #dc3545;
+}
+
+.btn-remove:hover:not(:disabled) {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-make-default:disabled,
+.btn-remove:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  max-width: 500px;
+  margin: 1.75rem auto;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Add to your CSS file */
+.billing-address-form {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.billing-address-form h6 {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.stripe-card-element {
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.stripe-card-element:focus-within {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .billing-address-form .row {
+    flex-direction: column;
+  }
+  
+  .billing-address-form .col-md-6 {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-dialog {
+    margin: 1rem;
+  }
+}

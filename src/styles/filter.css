@@ -1,0 +1,156 @@
+/* components/CategoryHeader.css */
+.category-header {
+  padding: 2rem 0 1rem;
+  background: #fff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.results-summary {
+  font-size: 0.9rem;
+}
+
+.filter-container {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.filter-item .form-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.search-form .input-group {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.search-form .form-control {
+  border: 1px solid #dee2e6;
+  border-right: none;
+}
+
+.search-form .form-control:focus {
+  box-shadow: none;
+  border-color: #007bff;
+}
+
+.search-btn {
+  background: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+}
+
+.form-select {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.view-options {
+  display: flex;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0.25rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.view-btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.view-btn:hover {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.view-btn.active {
+  background: #007bff;
+  color: white;
+}
+
+.view-btn i {
+  font-size: 1.1rem;
+}
+
+.clear-filters-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.clear-all-btn {
+  border-radius: 20px;
+  padding: 0.375rem 1rem;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.clear-all-btn:hover {
+  background: #dc3545;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-header {
+    padding: 1rem 0;
+  }
+  
+  .filter-container {
+    padding: 1rem;
+  }
+  
+  .view-options {
+    justify-content: center;
+  }
+  
+  .clear-filters-section {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-item .form-label {
+    font-size: 0.8rem;
+  }
+  
+  .form-select {
+    font-size: 0.875rem;
+  }
+  
+  .view-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .view-btn i {
+    font-size: 1rem;
+  }
+}

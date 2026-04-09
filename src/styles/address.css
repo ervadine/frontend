@@ -1,0 +1,766 @@
+/* Address Form Styles */
+.address-form-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  overflow: hidden;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.form-header h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+.address-form-container .php-email-form {
+  padding: 24px;
+  overflow-y: visible;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content {
+  flex: 1;
+  overflow-y: visible;
+}
+
+/* Address Type Selector */
+.address-type-selector {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.type-option {
+  flex: 1;
+}
+
+.type-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.type-label:hover {
+  border-color: #007bff;
+}
+
+.type-label.active {
+  border-color: #007bff;
+  background-color: #f8f9ff;
+}
+
+.type-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.type-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  border-top: 1px solid #e9ecef;
+  padding-top: 20px;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.form-actions .btn {
+  min-width: 120px;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Address Cards */
+.addresses-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.address-card {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.address-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.address-card.default {
+  border-color: #007bff;
+  background-color: #f8f9ff;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.default-badge {
+  background: #007bff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.address-text {
+  margin-bottom: 16px;
+  line-height: 1.5;
+  color: #495057;
+  white-space: pre-line;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.card-actions button {
+  padding: 6px 12px;
+  border: 1px solid #dee2e6;
+  background: white;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-actions .btn-edit:hover {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.card-actions .btn-remove:hover {
+  background: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.card-actions .btn-make-default {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.card-actions .btn-make-default:hover {
+  background: #218838;
+  border-color: #1e7e34;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #545b62;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #dee2e6;
+  color: #495057;
+}
+
+.btn-outline:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .address-form-container {
+    border-radius: 8px;
+  }
+  
+  .form-header {
+    padding: 20px 20px 0;
+  }
+  
+  .address-form-container .php-email-form {
+    padding: 20px;
+  }
+  
+  .address-type-selector {
+    flex-direction: column;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions .btn {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .addresses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-actions {
+    flex-direction: column;
+  }
+  
+  .card-actions button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .form-header {
+    padding: 16px 16px 0;
+  }
+  
+  .address-form-container .php-email-form {
+    padding: 16px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px;
+  }
+  
+  .type-label {
+    padding: 12px 8px;
+  }
+  
+  .type-icon {
+    font-size: 1.25rem;
+  }
+}
+
+
+
+/* Cancel Order Button Styles */
+
+/* Main Cancel Button in Order Details */
+.btn-cancel-order {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #dc3545;
+  background-color: transparent;
+  border: 2px solid #dc3545;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cancel-order:hover:not(:disabled) {
+  background-color: #dc3545;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.25);
+}
+
+.btn-cancel-order:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(220, 53, 69, 0.25);
+}
+
+.btn-cancel-order:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn-cancel-order .spinner-border {
+  width: 18px;
+  height: 18px;
+  border-width: 2px;
+  color: currentColor;
+}
+
+/* Small X Icon Button in Order Header */
+.btn-cancel-quick {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  color: #6c757d;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.btn-cancel-quick:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #dc3545;
+  color: #dc3545;
+  transform: scale(1.1);
+}
+
+.btn-cancel-quick:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.btn-cancel-quick:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-cancel-quick i {
+  line-height: 1;
+}
+
+/* Footer Cancel Button */
+.btn-cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #dc3545;
+  background-color: transparent;
+  border: 1px solid #dc3545;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 36px;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background-color: #dc3545;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(220, 53, 69, 0.2);
+}
+
+.btn-cancel:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn-cancel .spinner-border {
+  width: 14px;
+  height: 14px;
+  border-width: 1.5px;
+  margin-right: 6px;
+  color: currentColor;
+}
+
+/* Order Actions Container */
+.order-actions {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.order-actions h5 {
+  margin-bottom: 15px;
+  color: #495057;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-actions h5:before {
+  content: "⚠️";
+  font-size: 14px;
+}
+
+/* Cancel Note Styling */
+.cancel-note {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #fff3cd;
+  border-left: 3px solid #ffc107;
+  border-radius: 4px;
+  color: #856404;
+}
+
+.cancel-note i {
+  color: #ffc107;
+  margin-right: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn-cancel-order {
+    padding: 8px 20px;
+    font-size: 14px;
+    min-height: 40px;
+  }
+  
+  .btn-cancel {
+    padding: 6px 16px;
+    font-size: 13px;
+    min-height: 34px;
+  }
+  
+  .order-actions {
+    padding: 16px;
+  }
+}
+
+/* Animation for cancellation state */
+@keyframes pulse-cancel {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+.btn-cancel-order:focus {
+  outline: none;
+  animation: pulse-cancel 2s infinite;
+}
+
+/* Integration with existing order card styles */
+.order-card .btn-cancel-quick {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+}
+
+.order-card .order-header {
+  position: relative;
+  padding-right: 60px; /* Make space for the cancel quick button */
+}
+
+.order-footer .btn-cancel {
+  margin-left: 10px;
+}
+
+/* Hover effects for order cards with cancellation option */
+.order-card:hover .btn-cancel-quick {
+  opacity: 1;
+  visibility: visible;
+}
+
+.order-card:not(:hover) .btn-cancel-quick {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Ensure visibility on mobile */
+@media (max-width: 576px) {
+  .order-card .btn-cancel-quick {
+    opacity: 1;
+    visibility: visible;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .order-card .order-header {
+    padding-right: 50px;
+  }
+  
+  .order-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .order-footer .btn-cancel {
+    margin-left: 0;
+    flex: 1;
+    min-width: calc(50% - 4px);
+  }
+}
+
+/* Status badge adjustments */
+.status.cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+/* Add some spacing around the order actions section */
+.detail-section + .order-actions {
+  margin-top: 20px;
+}
+
+/* Tooltip for quick cancel button */
+.btn-cancel-quick {
+  position: relative;
+}
+
+.btn-cancel-quick::after {
+  content: "Cancel Order";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  background-color: #333;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  margin-bottom: 8px;
+}
+
+.btn-cancel-quick::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  margin-bottom: 0;
+}
+
+.btn-cancel-quick:hover::after,
+.btn-cancel-quick:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Focus states for accessibility */
+.btn-cancel-order:focus-visible,
+.btn-cancel:focus-visible,
+.btn-cancel-quick:focus-visible {
+  outline: 2px solid #dc3545;
+  outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .btn-cancel-order {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+  }
+  
+  .btn-cancel-order:hover:not(:disabled) {
+    background-color: #ff6b6b;
+    color: #1a1a1a;
+  }
+  
+  .btn-cancel-quick {
+    border-color: #495057;
+    color: #adb5bd;
+    background-color: #2d2d2d;
+  }
+  
+  .btn-cancel-quick:hover:not(:disabled) {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+    background-color: #3d3d3d;
+  }
+  
+  .btn-cancel {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+  }
+  
+  .btn-cancel:hover:not(:disabled) {
+    background-color: #ff6b6b;
+    color: #1a1a1a;
+  }
+  
+  .order-actions {
+    background-color: #2d2d2d;
+    border-color: #404040;
+  }
+  
+  .order-actions h5 {
+    color: #e9ecef;
+  }
+  
+  .cancel-note {
+    background-color: #332701;
+    border-left-color: #ffc107;
+    color: #ffd166;
+  }
+}

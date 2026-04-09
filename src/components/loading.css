@@ -1,0 +1,83 @@
+/* Add to your CSS file for enhanced spinner types */
+
+/* Dots Spinner */
+.spinner-dots {
+  display: inline-block;
+  text-align: center;
+}
+
+.spinner-dots > div {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  display: inline-block;
+  animation: spinner-dots-bounce 1.4s ease-in-out infinite both;
+}
+
+.spinner-dots .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner-dots .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes spinner-dots-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Bounce Spinner */
+.spinner-bounce {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bounce-ball {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: spinner-bounce 1.4s ease-in-out infinite both;
+}
+
+.bounce-ball:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.bounce-ball:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes spinner-bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Fullscreen and Overlay */
+.loading-fullscreen {
+  z-index: 9999;
+}
+
+.loading-overlay {
+  z-index: 999;
+}
+
+/* Size variations */
+.spinner-border-sm-custom {
+  width: 1rem;
+  height: 1rem;
+}
+
+.spinner-border-lg-custom {
+  width: 3rem;
+  height: 3rem;
+}

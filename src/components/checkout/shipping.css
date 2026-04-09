@@ -1,0 +1,170 @@
+/* Shipping Method Styles */
+.shipping-methods {
+  margin: 1.5rem 0;
+}
+
+.shipping-methods .form-label {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+  display: block;
+}
+
+.method-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.highlight-terms {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.5) !important;
+  border-color: #0d6efd !important;
+  transition: all 0.3s ease;
+}
+.method-option {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.method-option:hover {
+  border-color: #6c757d;
+  transform: translateY(-1px);
+}
+
+.method-option.active {
+  border-color: #0d6efd;
+  background-color: rgba(13, 110, 253, 0.05);
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.1);
+}
+
+/* Hide the actual checkbox completely */
+.method-option input[type="radio"] {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.method-option label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  margin: 0;
+  padding-left: 0; /* Remove padding since we're using custom indicator */
+}
+
+.method-name {
+  font-weight: 600;
+  color: #212529;
+  flex: 1;
+  min-width: 150px;
+  padding-left: 2rem; /* Space for custom radio button */
+  position: relative;
+}
+
+/* Custom radio button indicator */
+.method-name::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid #dee2e6;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.method-option.active .method-name::before {
+  border-color: #0d6efd;
+  background-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+}
+
+.method-name::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%) scale(0);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.method-option.active .method-name::after {
+  transform: translateY(-50%) scale(1);
+}
+
+.method-duration {
+  color: #6c757d;
+  font-size: 0.9rem;
+  flex: 2;
+  text-align: center;
+}
+
+.method-price {
+  font-weight: 700;
+  color: #0d6efd;
+  font-size: 1.1rem;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .method-option label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .method-name {
+    width: 100%;
+    text-align: left;
+    padding-left: 2rem;
+  }
+  
+  .method-duration,
+  .method-price {
+    width: 100%;
+    text-align: left;
+    padding-left: 2rem; /* Align with method name */
+  }
+  
+  .method-price {
+    font-size: 1rem;
+  }
+  
+  .method-option {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Alternative: If you want to keep the label structure without custom indicators */
+.method-option.simple label {
+  padding-left: 0;
+}
+
+.method-option.simple .method-name::before,
+.method-option.simple .method-name::after {
+  display: none;
+}
+
+.method-option.simple .method-name {
+  padding-left: 0;
+}
+
+.method-option.simple .method-duration,
+.method-option.simple .method-price {
+  padding-left: 0;
+}

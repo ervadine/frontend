@@ -1,0 +1,150 @@
+/* components/sidebar/sidebar.css */
+.widgets-container {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.widget-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.widget-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.widget-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.category-item {
+  margin-bottom: 0.5rem;
+}
+
+.category-header {
+  padding: 0.5rem 0;
+  transition: background-color 0.2s;
+}
+
+.category-header:hover {
+  background-color: #e9ecef;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.category-link {
+  color: #495057;
+  text-decoration: none;
+  flex: 1;
+}
+
+.category-link:hover {
+  color: #007bff;
+}
+
+.category-toggle {
+  color: #6c757d;
+}
+
+.subcategory-list {
+  border-left: 2px solid #e9ecef;
+  margin-left: 8px;
+}
+
+/* Price Range Slider */
+.range-slider {
+  position: relative;
+  height: 5px;
+  background: #ddd;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.slider-track {
+  height: 5px;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.slider-progress {
+  position: absolute;
+  height: 5px;
+  background: #007bff;
+  border-radius: 5px;
+  top: 0;
+}
+
+.range-slider input[type="range"] {
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  height: 5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+}
+
+.range-slider input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #007bff;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+/* Color Filter */
+.color-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.color-option .form-check-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #dee2e6;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.color-option .form-check-input:checked + .form-check-label .color-swatch {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Brand Filter */
+.brand-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.brand-item {
+  padding: 0.25rem 0;
+}
+
+.brand-search {
+  position: relative;
+}
+
+.brand-search .bi-search {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
